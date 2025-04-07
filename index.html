@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tostilocos - El Snack Perfecto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-dark: #4e342e;
+      --color-medium: #6d4c41;
+      --color-light: #d7ccc8;
+      --color-beige: #fffaf3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--color-beige);
+      color: var(--color-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--color-medium);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .logo {
+      max-width: 100px;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .slogan {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #ffe0b2;
+    }
+
+    nav {
+      background-color: var(--color-dark);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--color-light);
+      color: var(--color-dark);
+    }
+
+    .section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img, .banners img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 1rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover, .banners img:hover {
+      transform: scale(1.05);
+    }
+
+    .description {
+      max-width: 800px;
+      background-color: var(--color-light);
+      margin: auto;
+      padding: 2rem;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .product-price {
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .socials a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s;
+    }
+
+    .socials a img:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      background-color: var(--color-dark);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .gallery, .banners {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo de la empresa" class="logo">
+    <h1>Tostilocos</h1>
+    <p class="slogan">"Tostilocos, el snack perfecto para tu momento loco"</p>
+  </header>
+
+  <nav>
+    <a href="#galeria">Galería</a>
+    <a href="#descripcion">Descripción</a>
+    <a href="#redes">Redes Sociales</a>
+  </nav>
+
+  <section class="section gallery" id="galeria">
+    <h2>Galería de Productos</h2>
+    <img src="producto1.jpg" alt="Tostiloco 1">
+    <img src="producto2.jpg" alt="Tostiloco 2">
+    <img src="producto3.jpg" alt="Tostiloco 3">
+  </section>
+
+  <section class="section" id="descripcion">
+    <div class="description">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos una empresa apasionada por el sabor y la diversión. Nos dedicamos a preparar los mejores tostilocos con los ingredientes más sabrosos y frescos. Perfectos para disfrutar en cualquier momento con amigos o en familia.</p>
+      <p>El producto estrella: una combinación irresistible de Tostitos, cueritos, chamoy, salsas, cacahuates, limón y mucho más. ¡Una explosión de sabor en cada bocado!</p>
+      <p class="product-price">Precio: $50 MXN por orden</p>
+    </div>
+  </section>
+
+  <section class="section" id="redes">
+    <h2>Síguenos en Redes Sociales</h2>
+    <div class="socials">
+      <a href="https://www.instagram.com/tuusuario" target="_blank">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@tuusuario" target="_blank">
+        <img src="tiktok.png" alt="TikTok">
+      </a>
+      <a href="https://twitter.com/tuusuario" target="_blank">
+        <img src="twitter.png" alt="Twitter">
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <h2>Integrantes de la Empresa</h2>
+    <p>Valeria Cabrera Acevedo</p>
+    <p>Lizbeth Sarabia Cabrera</p>
+    <p>Yamileth Sanchez Cabrera</p>
+    <p>Blanca Camila Sanchez Zamudio</p>
+    <p>Álvaro Paolo Salcido Alvarado</p>
+    <p>Edgar Picasso Leon</p>
+    <p>Sebastián Corral Rojo</p>
+    <p>Librado Santiago Padilla Oseguera</p>
+  </footer>
+</body>
+</html>
